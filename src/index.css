@@ -1,3 +1,69 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  .dark {
+    --bg-color: #2d3748;
+    --text-color: #e2e8f0;
+    --border-color: #4a5568;
+    --button-bg: #4a5568;
+    --button-text: #edf2f7;
+  }
+}
+
+body {
+  background-color: theme('colors.white');
+  color: theme('colors.black');
+}
+
+.dark body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.card {
+  background-color: theme('colors.white');
+  border: 1px solid theme('colors.gray.300');
+}
+
+.dark .card {
+  background-color: #3c4858;
+  border-color: var(--border-color);
+}
+
+.button {
+  background-color: theme('colors.blue.500');
+  color: theme('colors.white');
+}
+
+.dark .button {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+}
+
+.header {
+  background-color: theme('colors.gray.100');
+  color: theme('colors.black');
+}
+
+.dark .header {
+  background-color: #3c4858;
+  color: var(--text-color);
+}
+
+a {
+  color: theme('colors.blue.600');
+}
+
+.dark a {
+  color: theme('colors.blue.400');
+}
+
+ul {
+  list-style-type: disc;
+}
+
+.dark ul {
+  color: var(--text-color);
+}
